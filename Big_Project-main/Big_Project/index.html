@@ -4,7 +4,8 @@
         <title>Elpošana</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onload="startTime()">
+        <!-- Šī ir sākuma lapa -->
         <div class="grid">
             <div class="row">
                 <div class="Wrapper">
@@ -20,7 +21,7 @@
                             <a class="link" href="RespiratorySystemHealth.html"> Plaušu veselība </a>
                         </div>
                         <div style="text-align: right;" class="button-Spot">
-                            <a class="button button-Dark button-Small" href="index.html" > Galerija </a>
+                            <a class="button button-Dark button-Small" href="Gallery.html" > Galerija </a>
                         </div>
                     </div>
                 </div>
@@ -30,28 +31,13 @@
                     <div class="text-Design">
                         <h1 class="h1-Title">Elpošana</h1>
                         <div class="text text-Medium">
-                            <b>Elpošana ir process, kurā gaiss pārvietojas plaušās un no tām...</b>
+                            <b>Elpošana ir process, kurā gaiss pārvietojas plaušās un no tām. Parasti šis process notiek automātiski. <br> Tagadējais laiks <div id="txt"></div> </b>
                         </div>
                     </div>
-                </div>
-                <div class="text-Center text">
-                    <a class="button button-White button-Large Left" href="index.html">Link 2</a>
-                    <a class="button button-Dark button-Large Right" href="index.html">Click me</a>
                 </div>
             </div>
             <div class="gridBackground">
                 <img width="100%" height="100%" src="Background.jpg">
-            </div>
-        </div>
-        <div class="grid Dark">
-            <div class="Wrapper">
-                <div class="row Container">
-                    <img width="100%" height="100%" class="image-Left image-Extra outline-White" src="Background.jpg">
-                    <div class="description-Right">
-                        <h2 class="h2-Title">Elpošana ir svarīga</h2>
-                        <div style="text-align: center;" class="text text-Medium">Visas lietas, kas dzīvo elpo</div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="footer">
@@ -66,5 +52,22 @@
                 </div>
             </div>
         </div>
+        <script>
+            function startTime() {
+              const today = new Date();
+              let h = today.getHours();
+              let m = today.getMinutes();
+              let s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+              setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+            </script>
     </body>
 </html>

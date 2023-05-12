@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Gallērija</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- Šī ir galērija -->
+    <body bgcolor="#121D31">
+        <div class="fullImg" id="fullImgBox">
+            <img src="Images/Background.jpg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
+        <div class="grid">
+            <div class="row">
+                <div class="Wrapper">
+                    <div class="topLinkBox">
+                        <div class="button-Spot">
+                            <a class="button button-White button-Small" href="index.html" > Sākum lapa </a>
+                        </div>
+                        <div class="links">
+                            <a class="link" href="HumanRespitorySystem.html"> Cilvēku elpošana </a>
+                            <a class="link" href="BloodCirculation.html"> Skābekļa kustība </a>
+                            <a class="link" href="AnimalRespiratorySystem.html"> Dzīvnieku elpošana </a>
+                            <a class="link" href="Plantphotosynthesis.html"> Augu elpošana </a>
+                            <a class="link" href="RespiratorySystemHealth.html"> Plaušu veselība </a>
+                        </div>
+                        <div style="text-align: right;" class="button-Spot">
+                            <a class="button button-Dark button-Small" href="Gallery.html" > Galerija </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="imgGallery">
+            <img src="Images/Background.jpg" onclick="openFullImg(this.src)">
+            <img src="Images/Background3.jpg" onclick="openFullImg(this.src)">
+            <img src="Images/Background4.jpg" onclick="openFullImg(this.src)">
+            <img src="Images/BackgroundCity.jpg" onclick="openFullImg(this.src)">
+            <img src="Images/BackgroundForest.jpg" onclick="openFullImg(this.src)">
+            <img src="Images/BackgroundNight.png" onclick="openFullImg(this.src)">
+            <img src="Images/degunsMute.png" onclick="openFullImg(this.src)">
+            <img src="Images/Elpošana.png" onclick="openFullImg(this.src)">
+            <img src="Images/HumanLungs.jpg" onclick="openFullImg(this.src)">
+            <img src="Images/PersonBreath.png" onclick="openFullImg(this.src)">
+            <img src="Images/Throat.png" onclick="openFullImg(this.src)">
+            <img src="Images/VocalCords.png" onclick="openFullImg(this.src)">
+            <img src="Images/Alveols.png" onclick="openFullImg(this.src)">
+            <img src="Images/Dog.png" onclick="openFullImg(this.src)">
+            <img src="Images/Fish.png" onclick="openFullImg(this.src)">
+            <img src="Images/Bees.png" onclick="openFullImg(this.src)">
+            <img src="Images/Frog.png" onclick="openFullImg(this.src)">
+            <img src="Images/Plant.png" onclick="openFullImg(this.src)">
+        </div>
+        <script>
+            var fullImgBox = document.getElementById("fullImgBox")
+            var fullImg = document.getElementById("fullImg")
+
+            function openFullImg(pic) {
+                fullImgBox.style.display = "flex";
+                fullImg.src =  pic
+            }
+
+            function closeFullImg() {
+                fullImgBox.style.display = "none";
+            }
+
+        </script>
+        <div class="footer">
+            <div class="Wrapper">
+                <div class="row">
+                    <div class="description-Left">
+                        <div style="text-align: center;" class="text text-Medium">Āgenskalna Valsts Ģimnāzija</div>
+                    </div>
+                    <div class="description-Right">
+                        <div style="text-align: center;" class="text text-Medium">Taisija: Rinalds Vītols 7.4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
